@@ -1,0 +1,75 @@
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace_33_4;assembly=_33_4"
+        x:Class="_33_4.MainWindow"
+        Title="My Avalonia Application" Width="940" Height="652 ">
+
+	<!-- Общий контейнер для всего содержимого -->
+	<StackPanel>
+
+		<!-- Горизонтальное меню с обводкой -->
+		<Border BorderBrush="Black" BorderThickness="1" Margin="0,10,0,0">
+			<Grid ColumnDefinitions="*, Auto">
+				<Menu Grid.Column="0">
+					<MenuItem Header="Home" />
+					<MenuItem Header="About" />
+					<MenuItem Header="Blog's Main Topic 1" />
+					<MenuItem Header="Blog's Main Topic 2" />
+					<MenuItem Header="Blog's Main Topic 3" />
+					<MenuItem Header="Associated blogs" />
+				</Menu>
+				<Menu Grid.Column="1" HorizontalAlignment="Right">
+					<MenuItem Header="RSS"/>
+				</Menu>
+			</Grid>
+		</Border>
+
+		<!-- Контент и правые блоки с четким разделением -->
+		<Grid Margin="10" ColumnDefinitions="2*,1*">
+			<!-- Левая колонка для основного текста -->
+			<StackPanel Grid.Row="1" Orientation="Vertical" Margin="10">
+
+				<TextBlock TextWrapping="Wrap" Text="Article 1"/>
+				<TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat eros vitae sem semper, et imperdiet ex cursus. Suspendisse semper ornare auctor. Nulla at mollis nunc, quis tempus ex. Proin pulvinar sem quam, ac cursus ex congue at. Sed elementum neque eros, eget semper turpis suscipit a. Aliquam placerat accumsan."/>
+				<TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl tellus, tempor in consectetur ac, scelerisque in purus. Praesent aliquet mauris magna, non finibus erat luctus vel. Donec mattis tellus maximus ex feugiat, non condimentum nibh pulvinar. Pellentesque elementum in leo ac volutpat. Aliquam erat volutpat. Integer dignissim ullamcorper leo."/>
+				<TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque velit quis gravida venenatis. Donec rutrum felis a mollis consectetur. Morbi auctor enim sed gravida porta. Nunc ut lectus erat. Mauris eu hendrerit nisl. Mauris nec vestibulum metus, eu vulputate mi. Sed a erat eget risus rhoncus pharetra. Ut suscipit."/>
+				<Image Width="500" Height="300" Source="C:/Users/79636/source/repos/33-4/33-4/стройка.jpg" Margin="0,10"/>
+				<TextBlock Grid.Row="2" Text="Rating: ★★★★☆" HorizontalAlignment="Right" Margin="10"/>
+
+			</StackPanel>
+
+
+			<!-- Правая колонка для дополнительных элементов -->
+			<StackPanel Grid.Column="1">
+				<Border Background="LightGray" Padding="10">
+					<StackPanel>
+						<TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. " TextWrapping="Wrap"/>
+						<Border BorderBrush="Black" BorderThickness="0" Margin="0,10,0,0">
+							<Grid ColumnDefinitions="*, Auto">
+								<Menu Grid.Column="0" HorizontalAlignment="Right">
+									<Button Content="More"/>
+									<TextBlock Text="Yesterday" FontStyle="Italic"/>
+								</Menu>
+							</Grid>
+						</Border>
+					</StackPanel>
+				</Border>
+
+				<Border Background="LightGray" Padding="10">
+					<StackPanel>
+						<TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. " TextWrapping="Wrap"/>
+						<Border BorderBrush="Black" BorderThickness="0" Margin="0,10,0,0">
+							<Grid ColumnDefinitions="*, Auto">
+								<Menu Grid.Column="0" HorizontalAlignment="Right">
+									<Button Content="More"/>
+									<TextBlock Text="1 week ago" FontStyle="Italic"/>
+								</Menu>
+							</Grid>
+						</Border>
+					</StackPanel>
+				</Border>
+			</StackPanel>
+		</Grid>
+	</StackPanel>
+</Window>
